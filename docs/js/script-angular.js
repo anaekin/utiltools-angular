@@ -1,9 +1,9 @@
 /* globals angular */
 
-(function(){
-    angular.module('app', ['ngRoute'])
+
+ var app = angular.module('app', ['ngRoute']);
         
-        .config(['$routeProvider', function($routeProvider) {
+        app.config(['$routeProvider', function($routeProvider) {
             $routeProvider
             .when('/calculator', {
                 templateUrl:"calculator.html"                
@@ -16,8 +16,8 @@
                 templateUrl: "notepad.html"
             });
                   
-        }])
-        .controller('MainController', function(){
+        }]);
+        app.controller('MainController', function(){
             this.number = 0;
             this.navItems = [
                 {
@@ -35,9 +35,11 @@
                 {
                     title : 'Notepad',
                     ref: '#notepad'
-                }];
-        this.set = function(item){
-            this.number = item;
-        };
+                }
+            ];
+            this.set = function(item){
+                this.number = item;
+            };
         });
-})();
+
+

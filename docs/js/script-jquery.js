@@ -1,15 +1,15 @@
 $(document).ready(function () {
-    $('#renameBtn').click(function () {
+    $('#renameBtn').on('click',function () {
         $("#todo-rename-div").toggle("slide", {
             direction: 'right'
         }, 200);
     });
-    $('#addBtn').click(function () {
+    $('#addBtn').on('click',function () {
         $("#itemDiv").toggle("slide", {
             direction: 'right'
         }, 200);
     });
-    $('#todo-rename-btn').click(function () {
+    $('#todo-rename-btn').on('click', function () {
         var name = $('#todo-rename-input').val();
         if (name !== '' && name != " ") {
             $('#todo-header').text(name);
@@ -18,7 +18,7 @@ $(document).ready(function () {
             direction: 'right'
         }, 400);
     });
-    $('#todo-rename-input').keypress(function (e) {
+    $('#todo-rename-input').on('keypress', function (e) {
         var name = $('#todo-rename-input').val();
         if (e.which == 13) {
             if (name !== '' && name !== " ") {
@@ -30,14 +30,14 @@ $(document).ready(function () {
             return false;
         }
     });
-    $('#notepad-rename-btn').click(function () {
+    $('#notepad-rename-btn').on('click',function () {
         var name = $('#notepad-rename-input').val();
         if (name !== '' && name !== " ") {
             $('#notepad-header').text(name);
         }
         //$('#noteDiv').toggle("slide",{direction: 'right'}, 400);;
     });
-    $('#notepad-rename-input').keypress(function (e) {
+    $('#notepad-rename-input').on('keypress', function (e) {
         if (e.which == 13) {
             var name = $('#notepad-rename-input').val();
             if (name !== '' && name !== " ") {
@@ -47,7 +47,7 @@ $(document).ready(function () {
             return false;
         }
     });
-    $('#addInput').keypress(function (e) {
+    $('#addInput').on('keypress',function (e) {
         if (e.which == 13) {
             var data = $('#addInput').val();
             if (data !== '' && data !== " ") {

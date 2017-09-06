@@ -2,8 +2,9 @@
 
 
  var app = angular.module('app', ['ngRoute']);
+
         
-        app.config(['$routeProvider', function($routeProvider) {
+        app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
             $routeProvider
             .when('/calculator', {
                 templateUrl:"calculator.html"                
@@ -15,31 +16,35 @@
             .when('/notepad', {
                 templateUrl: "notepad.html"
             });
-                  
+            $locationProvider.html5Mode(true); 
         }]);
-        app.controller('MainController', function(){
-            this.number = 0;
-            this.navItems = [
+        app.controller('MainController', function MainController($scope){
+            $scope.number = 0;
+            $scope.navItems = [
                 {
                     title : 'Home',
-                    ref: '#home'
+                    ref: 'home'
                 },
                 {
                     title : 'Calculator',
-                    ref: '#calculator'
+                    ref: 'calculator'
                 },
                 {
                     title : 'TODO-List',
-                    ref: '#todo-list'
+                    ref: 'todo-list'
                 },
                 {
                     title : 'Notepad',
-                    ref: '#notepad'
+                    ref: 'notepad'
                 }
             ];
-            this.set = function(item){
-                this.number = item;
+            
+            $scope.set = function(item){
+                $scope.number = item;
+                
+                
             };
+            
         });
 
 

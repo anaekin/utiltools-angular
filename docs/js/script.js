@@ -5,7 +5,7 @@ var mul = 1;
 var lastOp;
 var divCount = 0;
 var subCount = 0;
-function disp(element) {
+var disp = function(element) {
 	var val = element.value, count = 0;
 	//console.log(val);
 	
@@ -58,7 +58,7 @@ function disp(element) {
 			break;
 		default:
 			num1 += val;
-			textbox.value = num1;
+			textbox.value = '' + num1;
 			//console.log(num1);
 			break;
 		}
@@ -104,4 +104,3 @@ function disp(element) {
 		subCount = 0;
 	}
 }
-

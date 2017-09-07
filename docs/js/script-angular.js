@@ -27,12 +27,10 @@ app.controller('MainController', function MainController($scope) {
         {
             title: 'Calculator',
             ref: 'calculator'
-                }
-        , {
+                }, {
             title: 'TODO-List',
             ref: 'todo-list'
-                }
-        , {
+                }, {
             title: 'Notepad',
             ref: 'notepad'
                 }
@@ -81,7 +79,7 @@ app.controller('MainController', function MainController($scope) {
     };
 
     $scope.calculate = function (item) {
-        var res = 0;
+
         for (var i = 0; i < item.length - 1; i++) {
             console.log($scope.seq);
             var operand_one = item[i].varNumber;

@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    $('#renameBtn').on('click',function () {
+    $('#renameBtn').on('click', function () {
         $("#todo-rename-div").toggle("slide", {
             direction: 'right'
         }, 200);
     });
-    $('#addBtn').on('click',function () {
+    $('#addBtn').on('click', function () {
         $("#itemDiv").toggle("slide", {
             direction: 'right'
         }, 200);
@@ -30,7 +30,7 @@ $(document).ready(function () {
             return false;
         }
     });
-    $('#notepad-rename-btn').on('click',function () {
+    $('#notepad-rename-btn').on('click', function () {
         var name = $('#notepad-rename-input').val();
         if (name !== '' && name !== " ") {
             $('#notepad-header').text(name);
@@ -42,12 +42,15 @@ $(document).ready(function () {
             var name = $('#notepad-rename-input').val();
             if (name !== '' && name !== " ") {
                 $('#notepad-header').text(name);
+
             }
+            var emp = "";
+            $('#notepad-rename-input').attr("value", emp);
             //$('#noteDiv').toggle("slide",{direction: 'right'}, 400);;
             return false;
         }
     });
-    $('#addInput').on('keypress',function (e) {
+    $('#addInput').on('keypress', function (e) {
         if (e.which == 13) {
             var data = $('#addInput').val();
             if (data !== '' && data !== " ") {

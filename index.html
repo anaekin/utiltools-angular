@@ -18,10 +18,6 @@
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-
-
-
-
 </head>
 
 <body data-offset="50" ng-app="app" ng-controller="MainController">
@@ -32,7 +28,7 @@
     <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="184" style="margin-bottom: 0">
         <div class="container-fluid">
             <div class="navbar-header ">
-                <button type="button" class="navbar-toggle original" ng-init="isClicked = true" ng-class="{change: isClicked, original: !isClicked}" data-toggle="collapse" data-target="#myNavbar" ng-click="isClicked = !isClicked"> <span class="icon-bar" id="bar-one"></span> <span class="icon-bar" id="bar-two"></span> <span class="icon-bar" id="bar-three"></span> </button> <a class="navbar-brand" href="#!calculator" ng-click="number = 0">UtilToOls</a> </div>
+                <button type="button" class="navbar-toggle original" ng-init="isClicked=false" ng-class="{change: isClicked, original: !isClicked}" data-toggle="collapse" data-target="#myNavbar" ng-click="isClicked = !isClicked"> <span class="icon-bar" id="bar-one"></span> <span class="icon-bar" id="bar-two"></span> <span class="icon-bar" id="bar-three"></span> </button> <a class="navbar-brand" href="#!calculator" ng-click="number = 0">UtilToOls</a> </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li ng-class="{activeTab: $index == number}" ng-repeat="item in NAV_ITEMS" ng-click="set($index)">

@@ -3,6 +3,7 @@
 
 <head>
     <title>Utilities and Tools </title>
+    <base href="/ut/utiltools-angular/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!--<base href="/ut/utiltools-angular/">-->
-    <base href="https://anaekin.github.io/utiltools-angular/">
+
+    <!--<base href="https://anaekin.github.io/utiltools-angular/">-->
 
 
 </head>
@@ -30,7 +31,7 @@
     <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="184" style="margin-bottom: 0">
         <div class="container-fluid">
             <div class="navbar-header ">
-                <button type="button" class="navbar-toggle original" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar" id="bar-one"></span> <span class="icon-bar" id="bar-two"></span> <span class="icon-bar" id="bar-three"></span> </button> <a class="navbar-brand" ng-href="calculator" ng-click="number = 0">UtilToOls</a> </div>
+                <button type="button" class="navbar-toggle original" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar" id="bar-one"></span> <span class="icon-bar" id="bar-two"></span> <span class="icon-bar" id="bar-three"></span> </button> <a class="navbar-brand" href="#!calculator" ng-click="number = 0">UtilToOls</a> </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li ng-class="{activeTab: $index == number}" ng-repeat="item in NAV_ITEMS" ng-click="set($index)">
@@ -50,6 +51,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
 <script src="docs/js/script-angular.js"></script>
+<script src="docs/js/script-jquery.js"></script>
 
 </html>

@@ -1,42 +1,29 @@
 /* globals angular */
 var app = angular.module('app', ['ngRoute']);
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider.when('/calculator', {
-        templateUrl: "docs/pages/calculator-new.html"
-    }).when('/todo-list', {
-        templateUrl: "docs/pages/todo-list.html"
-    }).when('/notepad', {
-        templateUrl: "docs/pages/notepad.html"
-    }).otherwise('/calculator', {
-        templateUrl: "docs/pages/calculator-new.html"
-    });
-    $locationProvider.html5Mode(true);
-        }]);
-app.controller('MainController', function MainController($scope) {
+
+app.controller('MainController', function MainController($scope, $http, $rootScope) {
     $scope.NUM = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     $scope.OPS = ['+', '-', '/', '*', '='];
     $scope.NAV_ITEMS = [
         {
             title: 'Calculator',
-            ref: 'calculator'
+            ref: '#!calculator'
                 }, {
-            title: 'TODO-List',
-            ref: 'todo-list'
+            title: 'To-Do List',
+            ref: '#!todo-list'
                 }, {
             title: 'Notepad',
-            ref: 'notepad'
+            ref: '#!notepad'
                 }
             ];
     $scope.inputSeq = '';
     $scope.first = '';
     $scope.res = 0;
-    $scope.number = 0;
+
     $scope.seq = [{
         varNumber: "",
         operator: ""
     }];
-
-
 
     $scope.set = function (item) {
         $scope.number = item;
@@ -127,7 +114,17 @@ app.controller('MainController', function MainController($scope) {
         }
 
     };
+    $http.get('person_details.json')
+        .then(function (response) {
+            //console.log(data);
+            $scope.welcome = response.data.records;
 
+            console.log($scope.welcome.person.first_name);
+
+            //defer.resolve();
+        }).catch(function onError(response) {
+            console.log(response);
+        });
     // Using 'C' to clear all variables
     $scope.clear = function () {
         $scope.seq = [{
@@ -140,4 +137,18 @@ app.controller('MainController', function MainController($scope) {
         $scope.res = 0;
 
     };
+
 });
+
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    $routeProvider.when('/calculator', {
+        templateUrl: "docs/pages/calculator-new.html"
+    }).when('/todo-list', {
+        templateUrl: "docs/pages/todo-list.html"
+    }).when('/notepad', {
+        templateUrl: "docs/pages/notepad.html"
+    }).when('/', {
+        templateUrl: "docs/pages/calculator-new.html"
+    });
+    //$locationProvider.html5Mode(true);
+}]);

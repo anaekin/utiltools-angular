@@ -4,6 +4,7 @@ var app = angular.module('app', ['ngRoute']);
 app.controller('MainController', function MainController($scope, $http, $rootScope) {
     $scope.NUM = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     $scope.OPS = ['+', '-', '/', '*', '='];
+    // $scope.isClicked = false;
     $scope.NAV_ITEMS = [
         {
             title: 'Calculator',

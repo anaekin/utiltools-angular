@@ -64,7 +64,5 @@ $(document).ready(function () {
     $('#deleteBtn').on('click', function () {
         $('ul li').has('input[name="check"]:checked').remove();
     });
-    $('.navbar-toggle').on('click', function () {
-        $('.change, .original').toggleClass('change original');
-    });
+
 });

@@ -3,9 +3,9 @@
 
 <head>
     <title>Utilities and Tools </title>
-    <!-- <base href="/ut/utiltools-angular/"> -->
-
     <base href="https://anaekin.github.io/utiltools-angular/">
+    <!--<base href="/ut/utiltools-angular/"> -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body data-offset="50" ng-app="app" ng-controller="MainController">
@@ -34,10 +34,10 @@
 
 
 
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="myNavbar" ng-init="number = 0">
                 <ul class="nav navbar-nav">
-                    <li ng-class="{activeTab: $index == number}" ng-repeat="item in NAV_ITEMS" ng-click="set($index)">
-                        <a ng-href="{{item.ref}}" ng-bind="item.title"></a>
+                    <li class="nav-li" ng-repeat="item in NAV_ITEMS" ng-click="set($index)">
+                        <a ng-href="{{item.ref}}" ng-class="{activeTab: $index == number}" ng-bind="item.title"></a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

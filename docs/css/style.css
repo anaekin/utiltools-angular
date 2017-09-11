@@ -39,10 +39,52 @@ html {
     border: none;
 }
 
-button.navbar-toggle {
-    border: none;
-    border-radius: 0;
-    background: #3f51b5;
+.nav>li>a {
+    border-top: 4px solid #3d51b5;
+}
+
+.nav>li>a:hover {
+    border-top: 4px solid #333;
+    border-bottom: 4px solid #333;
+}
+
+.navbar-brand {
+    padding: 19px 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    background-color: #333;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 24px;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #ff4081;
+    transform: scale(1.2);
+    transition: all 0.4s ease;
+}
+
+.navbar {
+    z-index: 5;
+    border: 0px;
+    border-radius: 0px;
+}
+
+.activeTab {
+    border-bottom: 4px solid #ff4081;
+}
+
+.activeTab:hover {
+    color: white;
 }
 
 .navbar-inverse .navbar-toggle:focus,
@@ -117,32 +159,6 @@ button.navbar-toggle {
     background: #757575;
 }
 
-.navbar-inverse .navbar-nav>li>a {
-    color: #ffffff;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover {
-    background-color: #333;
-}
-
-.navbar-inverse .navbar-brand {
-    color: #ffffff;
-    font-family: 'Aldrich', sans-serif;
-    font-size: 24px;
-}
-
-.navbar-inverse .navbar-brand:hover {
-    color: #ff4081;
-    transform: scale(1.2);
-    transition: all 0.4s ease;
-}
-
-.navbar {
-    z-index: 5;
-    border: 0px;
-    border-radius: 0px;
-}
-
 .affix {
     top: 0;
     width: 100%;
@@ -193,10 +209,7 @@ label {
     font-size: 20px;
 }
 
-#addBtn,
-#renameBtn,
-.rename-btn,
-#deleteBtn {
+.material-btn {
     z-index: 3;
     height: 50px;
     width: 50px;
@@ -205,6 +218,7 @@ label {
     font-family: 'Aldrich', sans-serif;
     font-weight: 700;
     font-size: 23px;
+    padding: 7px 0 0 1px;
     position: absolute;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .23), 0 3px 10px rgba(0, 0, 0, .16);
 }
@@ -226,15 +240,6 @@ label {
 #addBtn {
     right: 25px;
     bottom: 25px;
-}
-
-button#addBtn:hover,
-.rename-btn:hover {
-    border: 0px;
-    font-size: 26px;
-    color: white;
-    background-color: #607D8B;
-    transition: all 0.2s ease;
 }
 
 button#addBtn {
@@ -264,20 +269,19 @@ button#addBtn {
     top: 25px;
 }
 
-.rename-btn {
+#todo-rename-btn,
+#notepad-rename-btn {
     position: absolute;
     top: -60px;
     right: 0px;
 }
 
-button#renameBtn:hover,
-button#deleteBtn:hover {
-    font-size: 21px;
+.material-btn:hover {
     color: white;
     background-color: #607D8B;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .23), 0 3px 10px rgba(0, 0, 0, .16);
-    transform: rotate3d(0, 1, 0, 180deg);
-    transition: all 0.6s ease;
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, .23), 0px 8px 10px 2px rgba(0, 0, 0, .23);
+    /* transform: scale(1.1, 1.1); */
+    transition: all 0.4s ease;
 }
 
 button#addBtn:focus {}
@@ -377,20 +381,20 @@ input:focus {
     outline: none !important;
 }
 
-.activeTab {
-    color: white;
-    background: #ff4081;
-}
-
-.activeTab:hover {
-    color: white;
-}
-
 @media only screen and (max-width: 768px) {
     .rename-div {
         display: none;
     }
     input.rename-input {
         width: 200px;
+    }
+    .nav>li>a {
+        border: none;
+    }
+    .nav>li>a:hover {
+        border: none;
+    }
+    .activeTab {
+        background-color: #ff4081;
     }
 }

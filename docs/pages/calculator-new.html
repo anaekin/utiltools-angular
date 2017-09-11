@@ -54,8 +54,13 @@
                     <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="0" ng-click="setVar(0)"> {{NUM[0]}} </button>
                 </div>
                 <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="." ng-click="setVar(10)"> .</button>
+                </div>
+                <div class="btn-group">
+
                     <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="=" ng-click="setOp(4)"> {{OPS[4]}} </button>
                 </div>
+
                 <div class="btn-group">
                     <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="/" ng-click="setOp(3)"> {{OPS[3]}} </button>
                 </div>

@@ -1,0 +1,48 @@
+.blue-back {
+    background-color: #3f51b5;
+}
+
+.darkblue-back {
+    background: #303F9F;
+}
+
+.grey-back {
+    background-color: #333;
+}
+
+.pink-font {
+    color: #ff4081;
+}
+
+.pink-back {
+    background-color: #ff4081;
+}
+
+.yellow-back {
+    background-color: #ffc107;
+}
+
+.lightgrey-back {
+    background-color: #607D8B;
+}
+
+.pinkBorder {
+    border-bottom: 4px solid #ff4081;
+}
+
+.blue-border {
+    border-top: 4px solid #3f51b5;
+}
+
+.text-primary-color {
+    color: #fff;
+}
+
+.darkblue-full-border {
+    border: 2px solid #303F9F;
+}
+
+.blue-topbottom-border {
+    border-top: 2px solid #3f51b5;
+    border-bottom: 2px solid #3f51b5;
+}

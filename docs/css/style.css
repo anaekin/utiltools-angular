@@ -18,29 +18,17 @@ html {
     color: white;
 }
 
-.container-h3 {
-    font-family: 'Aldrich', sans-serif;
-    font-weight: 500;
-    font-size: 32px;
-    color: #ff4081;
-}
-
 .nav {
     padding-left: 0;
     padding-top: 0 !important;
 }
 
 .navbar-inverse {
-    background-color: #3f51b5;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .23), 0 3px 10px rgba(0, 0, 0, .16);
 }
 
 .navbar-collapse {
     border: none;
-}
-
-.nav>li>a {
-    border-top: 4px solid #3d51b5;
 }
 
 .nav>li>a:hover {
@@ -73,27 +61,20 @@ html {
     transition: all 0.4s ease;
 }
 
+.navbar-header .navbar-toggle:hover,
+.navbar-header .navbar-toggle:focus {
+    background-color: #2196F3;
+}
+
 .navbar {
     z-index: 5;
     border: 0px;
     border-radius: 0px;
 }
 
-.activeTab {
-    border-bottom: 4px solid #ff4081;
-}
-
-.activeTab:hover {
-    color: white;
-}
-
-.navbar-inverse .navbar-toggle:focus,
-.navbar-inverse .navbar-toggle:hover {
-    background: #3f51b5;
-}
-
 .change,
 .original {
+    background: #2196F3;
     border: none;
     width: 40px;
     padding: 9px 5px 9px 5px;
@@ -223,10 +204,6 @@ label {
     box-shadow: 0 3px 10px rgba(0, 0, 0, .23), 0 3px 10px rgba(0, 0, 0, .16);
 }
 
-#todo-rename-btn {
-    background: #303f9f;
-}
-
 #renameBtn {
     right: 25px;
     bottom: 90px;
@@ -332,14 +309,12 @@ input#addInput {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     color: #ffffff;
-    background: #ff4081;
     font-size: 25px;
     padding: 30px 20px;
     /*box-shadow: 0 3px 10px rgba(0,0,0,.23), 0 3px 10px rgba(0,0,0,.16);*/
 }
 
 #notepad-header {
-    background: #303f9f;
     padding: 17px 20px;
 }
 
@@ -368,7 +343,6 @@ p.item {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 20px;
-    border: 2px solid #303f9f;
     padding: 10px 10px 10px 10px;
     margin: 45px 0 5px 0;
     /*border:none;*/

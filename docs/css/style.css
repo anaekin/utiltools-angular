@@ -1,5 +1,10 @@
 html {
-    overflow: auto;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 .header h1 {
@@ -16,6 +21,12 @@ html {
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: italic;
     color: white;
+}
+
+.container-h3 {
+    font-family: 'Aldrich', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
 }
 
 .nav {
@@ -347,6 +358,7 @@ p.item {
     margin: 45px 0 5px 0;
     /*border:none;*/
     width: 100%;
+    resize: none;
 }
 
 button:focus,

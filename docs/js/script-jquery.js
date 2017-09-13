@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('#renameBtn').on('click', function () {
         $("#todo-rename-div").toggle("slide", {
             direction: 'right'
@@ -64,5 +65,6 @@ $(document).ready(function () {
     $('#deleteBtn').on('click', function () {
         $('ul li').has('input[name="check"]:checked').remove();
     });
+
 
 });

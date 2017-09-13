@@ -3,50 +3,54 @@
 
 <head>
     <title>Utilities and Tools </title>
-    <base href="https://anaekin.github.io/utiltools-angular/">
-    <!--<base href="/ut/utiltools-angular/">-->
-
+    <!-- <base href="https://anaekin.github.io/utiltools-angular/"> -->
+    <base href="/ut/utiltools-angular/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="docs/css/style.css" type="text/css">
     <link rel="stylesheet" href="docs/css/check-palette.css" type="text/css">
+    <link rel="stylesheet" href="docs/css/animation.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
 
 <body data-offset="50" ng-app="app" ng-controller="MainController">
-    <div class="jumbotron text-center header darkblue-back" id="home">
-        <h1>UtilToOls</h1>
-        <h3 class="light-primary-text">Here, you can use various tools like Calculator, To-Do lists, Notepad etc.</h3>
-    </div>
-    <nav class="navbar navbar-inverse blue-back" data-spy="affix" data-offset-top="184" style="margin-bottom: 0">
-        <div class="container-fluid">
-            <div class="navbar-header ">
+    <div class="loader">
+        <div class="sub">
+            <div class="inside-sub">
 
-                <button type="button" class="navbar-toggle original" ng-init="isClicked=false" ng-class="{change: isClicked, original: !isClicked}" data-toggle="collapse" data-target="#myNavbar" ng-click="isClicked = !isClicked"> <span class="icon-bar" id="bar-one"></span> <span class="icon-bar" id="bar-two"></span> <span class="icon-bar" id="bar-three"></span> </button> <a class="navbar-brand" href="#!calculator" ng-click="number = 0">UtilToOls</a> </div>
-
-
-
-            <div class="collapse navbar-collapse" id="myNavbar" ng-init="number = 0">
-                <ul class="nav navbar-nav">
-                    <li class="nav-li" ng-repeat="item in NAV_ITEMS" ng-click="set($index)">
-                        <a ng-href="{{item.ref}}" ng-class="{pinkBorder: $index == number}" class="blue-border" ng-bind=" item.title "></a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right ">
-                    <li><a href=" # " class="blue-topbottom-border">About</a></li>
-                </ul>
             </div>
+            <div class="inside-sub-2"></div>
         </div>
-    </nav>
-    <div id="view-container " ng-view>
+    </div>
+    <div class="main">
+        <div class="jumbotron text-center header darkblue-back" id="home">
+            <h1>UtilToOls</h1>
+            <h3 class="light-primary-text">Here, you can use various tools like Calculator, To-Do lists, Notepad etc.</h3>
+        </div>
+        <nav class="navbar navbar-inverse blue-back" data-spy="affix" data-offset-top="184" style="margin-bottom: 0">
+            <div class="container-fluid">
+                <div class="navbar-header ">
+                    <button type="button" class="navbar-toggle original" ng-init="isClicked=false" ng-class="{change: isClicked, original: !isClicked}" data-toggle="collapse" data-target="#myNavbar" ng-click="isClicked = !isClicked"> <span class="icon-bar" id="bar-one"></span> <span class="icon-bar" id="bar-two"></span> <span class="icon-bar" id="bar-three"></span> </button> <a class="navbar-brand" href="#!calculator" ng-click="number = 0">UtilToOls</a> </div>
+                <div class="collapse navbar-collapse" id="myNavbar" ng-init="number = 0">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-li" ng-repeat="item in NAV_ITEMS" ng-click="set($index)">
+                            <a ng-href="{{item.ref}}" ng-class="{pinkBorder: $index == number}" class="blue-border" ng-bind=" item.title "></a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li><a href=" # " class="blue-topbottom-border">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="view-container " ng-view> </div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
@@ -56,6 +60,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js "></script>
 <script src="docs/js/script-jquery.js "></script>
 <script src="docs/js/script-angular.js "></script>
-
 
 </html>

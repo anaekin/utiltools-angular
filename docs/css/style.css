@@ -1,5 +1,5 @@
 html {
-    overflow: scroll;
+    overflow: auto;
 }
 
 ::-webkit-scrollbar {
@@ -384,3 +384,12 @@ input:focus {
         background-color: #ff4081;
     }
 }
+
+
+/*
+@media only screen and (min-width: 768px) {
+     ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}*/

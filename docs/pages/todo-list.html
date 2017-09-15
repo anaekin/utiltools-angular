@@ -4,30 +4,19 @@
         <div class="col col-md-offset-3 col-md-6" id="todo-container">
             <form>
                 <div class="">
-                    <div class="col col-md-12 text-left header div-header pink-back" id="todo-header">Item List</div>
+                    <div class="col col-md-12 text-left header div-header pink-back" ng-bind="todoTitle.value" id="todo-header"></div>
                     <div id="todo-rename-div" class="rename-div">
-                        <input type="text" value="" placeholder="Enter title" dir="ltr" class=" rename-input" id="todo-rename-input"> <span class="input-group-btn" id="todo-rename"><button type="button" id="todo-rename-btn" class="darkblue-back text-primary-color text-center material-btn"><i class="material-icons">save</i></button>
+                        <input type="text" value="" placeholder="Enter title" dir="ltr" class=" rename-input" id="todo-rename-input" ng-model="todoValue.value" ng-keydown="$event.keyCode === 13 && renameTodo() "> <span class="input-group-btn" id="todo-rename"><button type="button" id="todo-rename-btn" class="darkblue-back text-primary-color text-center material-btn" ng-click="renameTodo()"><i class="material-icons">save</i></button>
                                 </span> </div>
                     <div>
                         <ul class="todo-list" id="todo-list">
-                            <li class="">
+                            <li class="" ng-repeat="item in todoItemList track by $index">
                                 <p class="item">
                                     <input type="checkbox" value="" name="check" class="check-box">
-                                    <label class="check-label"> Database Training </label>
+                                    <label class="check-label" ng-bind="item"> </label>
                                 </p>
                             </li>
-                            <li class="">
-                                <p class="item">
-                                    <input type="checkbox" value="" name="check" class="check-box">
-                                    <label class="check-label"> Java Training </label>
-                                </p>
-                            </li>
-                            <li class="">
-                                <p class="item">
-                                    <input type="checkbox" value="" name="check" class="check-box">
-                                    <label class="check-label"> UI Training </label>
-                                </p>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -36,7 +25,7 @@
 
                 <button type="button" id="addBtn" class="btn pink-back text-primary-color text-center  material-btn"><i class="material-icons">add_box</i></button>
                 <div class="input-group" id="itemDiv">
-                    <input type="text" value="" placeholder="Enter" dir="ltr" class="form-control" id="addInput"> </div>
+                    <input type="text" value="" placeholder="Enter" dir="ltr" ng-model="listItem.value" ng-keydown="$event.keyCode === 13 && addListItem()" class="form-control" id="addInput"> </div>
             </form>
         </div>
     </div>

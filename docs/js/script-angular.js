@@ -1,5 +1,19 @@
 /* globals angular */
 var app = angular.module('app', ['ngRoute']);
+app.directive('myEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown", function (event) {
+            if (event.which === 13 || event.keyCode === 13) {
+                scope.$apply(function () {
+                    scope.$eval(attrs.myEnter);
+
+                });
+
+                event.preventDefault();
+            }
+        });
+    };
+});
 app.controller('MainController', function MainController($scope, $http) {
     $scope.NUM = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
     $scope.OPS = ['+', '-', '/', '*', '='];
@@ -16,6 +30,12 @@ app.controller('MainController', function MainController($scope, $http) {
             ref: '#!notepad'
                 }
             ];
+
+    $scope.todoItemList = [
+        'Java Training',
+        'UI Training'
+    ];
+
     $scope.inputSeq = '';
     $scope.first = '';
     $scope.res = 0;
@@ -118,6 +138,45 @@ app.controller('MainController', function MainController($scope, $http) {
     }).catch(function onError(response) {
         console.log(response);
     });
+
+
+    $scope.master = {};
+    $scope.notepadTitle = {
+        value: 'Notes'
+    };
+    $scope.notepadValue = {
+        value: ''
+    };
+    $scope.todoTitle = {
+        value: 'Item List'
+    };
+    $scope.todoValue = {
+        value: ''
+    };
+    $scope.renameNotepad = function () {
+        if ($scope.notepadValue.value) {
+            $scope.notepadTitle.value = $scope.notepadValue.value;
+        }
+        $scope.notepadValue = angular.copy($scope.master);
+    };
+    $scope.renameTodo = function () {
+        if ($scope.todoValue.value) {
+            $scope.todoTitle.value = $scope.todoValue.value;
+        }
+        $scope.todoValue = angular.copy($scope.master);
+    };
+
+    $scope.listItem = {
+        value: ''
+    };
+    $scope.addListItem = function () {
+        if ($scope.listItem.value) {
+            $scope.todoItemList.push($scope.listItem.value);
+        }
+        $scope.listItem = {};
+    };
+
+
 });
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
     $routeProvider.when('/calculator', {

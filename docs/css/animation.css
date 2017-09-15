@@ -24,18 +24,23 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #ff4f00;
+    background-color: #0d47a1;
     animation-name: toCircle;
     animation-duration: 7s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
+.main {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .inside-sub {
     border-radius: 50%;
     box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.4), 0 12px 20px 0 rgba(0, 0, 0, 0.25);
     position: absolute;
-    background-color: #ff4f00;
+    background-color: #2196f3;
     top: 60px;
     left: 60px;
     margin: 15px;
@@ -51,7 +56,7 @@
     border-radius: 50%;
     box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.4), 0 12px 20px 0 rgba(0, 0, 0, 0.25);
     position: absolute;
-    background-color: #ff4f00;
+    background-color: #2196f3;
     top: 60px;
     left: 60px;
     margin: 15px;
@@ -63,30 +68,39 @@
 }
 
 @keyframes toCircle {
+    0% {
+        background-color: #0d47a1;
+    }
     10% {
-        background-color: #ff9300;
         border-radius: 50% 0 0 0;
     }
     15% {
         transform: rotate(45deg);
     }
+    20% {
+        background-color: #1565c0;
+    }
     30% {
-        background-color: #ffda00;
         border-radius: 50% 50% 0 0;
     }
     35% {
-        background-color: #ffda00;
+        background-color: #1976d2;
         transform: rotate(-90deg);
     }
-    50% {
-        background-color: #ff9300;
+    40% {
         border-radius: 50% 50% 50% 0;
+    }
+    50% {
+        background-color: #1e88e5;
     }
     55% {
         transform: rotate(225deg);
     }
     60% {
-        background-color: #ff4f00;
+        background-color: #2196f3;
+        border-radius: 50%;
+    }
+    65% {
         border-radius: 50%;
     }
     75%,
@@ -131,11 +145,12 @@
         width: 500px;
     }
     100% {
+        background-color: #2196f3;
         border-radius: 50%;
         box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.4), 0 12px 20px 0 rgba(0, 0, 0, 0.25);
         opacity: 0;
-        height: 1000px;
-        width: 100%;
+        height: 1300px;
+        width: 1300px;
     }
 }
 
@@ -145,12 +160,12 @@
         width: 0px;
     }
     50% {
-        background-color: #ff4f00;
         height: 120px;
         width: 120px;
         margin: -45px;
     }
     100% {
+        background-color: #2196f3;
         height: 0px;
         width: 0px;
         margin: 15px;
@@ -163,12 +178,12 @@
         width: 0px;
     }
     50% {
-        background-color: #ff4f00;
         height: 90px;
         width: 90px;
         margin: -30px;
     }
     100% {
+        background-color: #2196f3;
         height: 0px;
         width: 0px;
         margin: 15px;

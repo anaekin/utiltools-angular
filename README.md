@@ -1,5 +1,5 @@
 # utiltools-angular
-utiltools using angular
+utiltools using angularjs
 
 This is same as utiltools repository but here instead of javascript, angularjs is used.
 
@@ -13,3 +13,5 @@ be issues.
 Please let me know about the bugs, and its fix if you know. Otherwise, I will try to resolve the issue as soon as possible.
 
 Enjoy!!
+
+

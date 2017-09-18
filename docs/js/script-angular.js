@@ -17,7 +17,6 @@ app.directive('myEnter', function () {
 app.controller('MainController', function MainController($scope, $http) {
     $scope.NUM = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
     $scope.OPS = ['+', '-', '/', '*', '='];
-    // $scope.isClicked = false;
     $scope.NAV_ITEMS = [
         {
             title: 'Calculator',
@@ -41,7 +40,6 @@ app.controller('MainController', function MainController($scope, $http) {
             val: false
         }
     ];
-    console.log($scope.todoItemList);
     $scope.inputSeq = '';
     $scope.first = '';
     $scope.res = 0;
@@ -90,7 +88,7 @@ app.controller('MainController', function MainController($scope, $http) {
             $scope.first = '';
         }
     };
-    //((parseFloat(inputSeq) < 0 )?((parseFloat(inputSeq)*-1) + '-') :(inputSeq || 0 ))
+
     // Using loop to add 'varNumber' in 'seq' variable
     $scope.calculate = function (item) {
         for (var i = 0; i < item.length - 1; i++) {
@@ -142,7 +140,7 @@ app.controller('MainController', function MainController($scope, $http) {
         console.log($scope.welcome.person.first_name);
         //defer.resolve();
     }).catch(function onError(response) {
-        console.log(response);
+        console.log("Created By:", response);
     });
 
 
@@ -179,14 +177,15 @@ app.controller('MainController', function MainController($scope, $http) {
             $scope.todoItemList.push($scope.listItem);
         }
         $scope.listItem = {};
-        console.log($scope.todoItemList);
+        // console.log($scope.todoItemList);
     };
     $scope.removeListItem = function () {
-        angular.forEach($scope.todoItemList, function (value, key) {
-            if (value.val) {
-                $scope.todoItemList.splice(key, 1);
+
+        for (var i = $scope.todoItemList.length - 1; i >= 0; i--) {
+            if ($scope.todoItemList[i].val) {
+                $scope.todoItemList.splice($scope.todoItemList[i], 1);
             }
-        });
+        }
     };
 
 });
@@ -200,5 +199,4 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
     }).when('/', {
         templateUrl: "docs/pages/calculator-new.html"
     });
-    //$locationProvider.html5Mode(true);
 }]);

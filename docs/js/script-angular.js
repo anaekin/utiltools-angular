@@ -229,12 +229,9 @@ app.controller('MainController', function MainController($scope, $http) {
 
     /****************************** Removing Item from TODO List ****************************************************/
     $scope.removeListItem = function () {
-
-        for (var i = $scope.todoItemList.length - 1; i >= 0; i--) {
-            if ($scope.todoItemList[i].val) {
-                $scope.todoItemList.splice($scope.todoItemList[i], 1);
-            }
-        }
+        $scope.todoItemList = $scope.todoItemList.filter(function (item) {
+            return !item.val;
+        });
     };
 
 });

@@ -293,23 +293,35 @@ input#addInput {
 }
 
 .rename-div {
-    display: none;
+    display: block;
     position: absolute;
     top: 50px;
     margin: 10px 10px 10px 50px;
     right: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 600ms, opacity 600ms;
 }
 
-.rename-div {
+.divHide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.itemDiv {
     display: block;
-}
-
-#itemDiv {
-    display: none;
     position: absolute;
     bottom: 5px;
     margin: 10px 10px 10px 50px;
     right: 65px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 600ms, opacity 600ms;
+}
+
+.divShow {
+    visibility: visible;
+    opacity: 1;
 }
 
 .main-container {

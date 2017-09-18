@@ -32,10 +32,16 @@ app.controller('MainController', function MainController($scope, $http) {
             ];
 
     $scope.todoItemList = [
-        'Java Training',
-        'UI Training'
+        {
+            text: 'Java Training',
+            val: false
+        },
+        {
+            text: 'UI Training',
+            val: false
+        }
     ];
-
+    console.log($scope.todoItemList);
     $scope.inputSeq = '';
     $scope.first = '';
     $scope.res = 0;
@@ -166,16 +172,22 @@ app.controller('MainController', function MainController($scope, $http) {
         $scope.todoValue = angular.copy($scope.master);
     };
 
-    $scope.listItem = {
-        value: ''
-    };
+    $scope.listItem = {};
     $scope.addListItem = function () {
-        if ($scope.listItem.value) {
-            $scope.todoItemList.push($scope.listItem.value);
+        if ($scope.listItem.text) {
+            $scope.listItem.val = false;
+            $scope.todoItemList.push($scope.listItem);
         }
         $scope.listItem = {};
+        console.log($scope.todoItemList);
     };
-
+    $scope.removeListItem = function () {
+        angular.forEach($scope.todoItemList, function (value, key) {
+            if (value.val) {
+                $scope.todoItemList.splice(key, 1);
+            }
+        });
+    };
 
 });
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {

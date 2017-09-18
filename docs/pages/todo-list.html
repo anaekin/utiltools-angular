@@ -1,34 +1,32 @@
-<div id="todo" class="main-container">
+<div id="todo" class="main-container" ng-init="isVisible = true; isHidden = false">
     <div class="container">
         <h3 class="container-h3 text-center dark-primary-text-color">To-Do List</h3>
         <div class="col col-md-offset-3 col-md-6" id="todo-container">
             <form>
                 <div class="">
                     <div class="col col-md-12 text-left header div-header pink-back" ng-bind="todoTitle.value" id="todo-header"></div>
-                    <div id="todo-rename-div" class="rename-div">
+                    <div id="todo-rename-div" class="rename-div" ng-class="{divHide: !isVisible}">
                         <input type="text" value="" placeholder="Enter title" dir="ltr" class=" rename-input" id="todo-rename-input" ng-model="todoValue.value" ng-keydown="$event.keyCode === 13 && renameTodo() "> <span class="input-group-btn" id="todo-rename"><button type="button" id="todo-rename-btn" class="darkblue-back text-primary-color text-center material-btn" ng-click="renameTodo()"><i class="material-icons">save</i></button>
                                 </span> </div>
                     <div>
                         <ul class="todo-list" id="todo-list">
                             <li class="" ng-repeat="item in todoItemList track by $index">
                                 <p class="item">
-                                    <input type="checkbox" value="" name="check" class="check-box">
-                                    <label class="check-label" ng-bind="item"> </label>
+                                    <input type="checkbox" value="" name="check" class="check-box" ng-model="item.val">
+                                    <label class="check-label" ng-bind="item.text"> </label>
                                 </p>
                             </li>
 
                         </ul>
                     </div>
                 </div>
-                <button type="button" id="renameBtn" class="btn pink-back text-primary-color text-center  material-btn"><i class="material-icons">mode_edit</i></button>
-                <button type="button" id="deleteBtn" class="btn pink-back text-primary-color text-center  material-btn"><i class="material-icons">delete</i></button>
+                <button type="button" id="renameBtn" ng-click="isVisible = !isVisible" class="btn pink-back text-primary-color text-center  material-btn"><i class="material-icons">mode_edit</i></button>
+                <button type="button" id="deleteBtn" class="btn pink-back text-primary-color text-center  material-btn"><i class="material-icons" ng-click="removeListItem()">delete</i></button>
 
-                <button type="button" id="addBtn" class="btn pink-back text-primary-color text-center  material-btn"><i class="material-icons">add_box</i></button>
-                <div class="input-group" id="itemDiv">
-                    <input type="text" value="" placeholder="Enter" dir="ltr" ng-model="listItem.value" ng-keydown="$event.keyCode === 13 && addListItem()" class="form-control" id="addInput"> </div>
+                <button type="button" id="addBtn" ng-click="isHidden = !isHidden" class="btn pink-back text-primary-color text-center  material-btn"><i class="material-icons">add_box</i></button>
+                <div class="input-group itemDiv" ng-class="{divShow: isHidden}">
+                    <input type="text" value="" placeholder="Enter" dir="ltr" ng-model="listItem.text" ng-keydown="$event.keyCode === 13 && addListItem()" class="form-control" id="addInput"> </div>
             </form>
         </div>
     </div>
 </div>
-
-<script src="docs/js/script-jquery.js"></script>

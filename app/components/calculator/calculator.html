@@ -1,0 +1,70 @@
+<div id="calculator" class="main-container">
+    <div class="container">
+        <h3 class="container-h3 text-center">Calculator</h3>
+        <div class="col col-md-offset-3 col-md-6 " id="calculator-container">
+            <div class="form-group">
+                <input type="text" id="eq" placeholder="0" dir="rtl" class="form-control" value="{{cal.inputSeq}}" disabled="true"> </div>
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="7" ng-click="cal.setVar(7)"> {{cal.NUM[7]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="8" ng-click="cal.setVar(8)"> {{cal.NUM[8]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="9" ng-click="cal.setVar(9)"> {{cal.NUM[9]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="+" ng-click="cal.setOp(0)"> {{cal.OPS[0]}} </button>
+                </div>
+            </div>
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="4" ng-click="cal.setVar(4)"> {{cal.NUM[4]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="5" ng-click="cal.setVar(5)"> {{cal.NUM[5]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="6" ng-click="cal.setVar(6)"> {{cal.NUM[6]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="-" ng-click="cal.setOp(1)"> {{cal.OPS[1]}} </button>
+                </div>
+            </div>
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="1" ng-click="cal.setVar(1)"> {{cal.NUM[1]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="2" ng-click="cal.setVar(2)"> {{cal.NUM[2]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="3" ng-click="cal.setVar(3)"> {{cal.NUM[3]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="*" ng-click="cal.setOp(2)"> {{cal.OPS[2]}} </button>
+                </div>
+            </div>
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="C" ng-click="cal.clear()"> C </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-num-btn" value="0" ng-click="cal.setVar(0)"> {{cal.NUM[0]}} </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="." ng-click="cal.setVar(10)"> .</button>
+                </div>
+                <div class="btn-group">
+
+                    <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="=" ng-click="cal.setOp(4)"> {{cal.OPS[4]}} </button>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-basic btn-lg cal-btn cal-op-btn" value="/" ng-click="cal.setOp(3)"> {{cal.OPS[3]}} </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

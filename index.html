@@ -3,17 +3,17 @@
 
 <head>
     <title>Utilities and Tools </title>
-    <base href="https://anaekin.github.io/utiltools-angular/">
-    <!--<base href="/ut/utiltools-angular/">-->
+    <!--<base href="https://anaekin.github.io/utiltools-angular/">-->
+    <base href="/ut/utiltools-angular-new/">
 
     <meta charset="utf-8">
     <meta name="theme-color" content="#2196F3">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="docs/css/style.css" type="text/css">
-    <link rel="stylesheet" href="docs/css/check-palette.css" type="text/css">
-    <link rel="stylesheet" href="docs/css/animation.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/check-palette.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/animation.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:400,700" rel="stylesheet">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </nav>
-        <div id="view-container " ng-view> </div>
+        <div id="view-container" ng-view> </div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
@@ -61,6 +61,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js "></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js "></script>
 
-<script src="docs/js/script-angular.js "></script>
+<script src="app/app.module.js"></script>
+<script src="app/app.controller.js"></script>
+<script src="app/components/calculator/calculator.js"></script>
+<script src="app/components/notepad/notepad.js"></script>
+<script src="app/components/todo/todo.js"></script>
+<script src="app/directives/enterDirective.js"></script>
+<script src="app/services/myService.js"></script>
 
 </html>

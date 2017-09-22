@@ -1,6 +1,6 @@
 /*globals angular*/
 var app = angular.module('app');
-app.factory('MyService', function () {
+app.factory('myService', function () {
     return {
         todoTitle: {
             value: 'Item List'

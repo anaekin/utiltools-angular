@@ -8,17 +8,17 @@ angular.module('app.notepad', ['ngRoute'])
             controllerAs: "note"
         });
 }])
-    .controller('NotepadController', ['MyService', function (MyService) {
+    .controller('NotepadController', ['myService', function (myService) {
 
         this.master = {};
-        this.notepadTitle = MyService.notepadTitle;
+        this.notepadTitle = myService.notepadTitle;
         this.notepadValue = {
             value: ''
         };
         this.renameNotepad = function () {
             if (this.notepadValue.value) {
                 this.notepadTitle.value = this.notepadValue.value;
-                MyService.updateNotepadTitle(this.notepadTitle);
+                myService.updateNotepadTitle(this.notepadTitle);
             }
             this.notepadValue = angular.copy(this.master);
         };

@@ -8,12 +8,12 @@ angular.module('app.todo', ['ngRoute'])
             controllerAs: "todo"
         });
 }])
-    .controller('TodoController', ['MyService', function (MyService) {
+    .controller('TodoController', ['myService', function (myService) {
         this.todoValue = {
             value: ''
         };
-        this.todoItemList = MyService.todoItemList;
-        this.todoTitle = MyService.todoTitle;
+        this.todoItemList = myService.todoItemList;
+        this.todoTitle = myService.todoTitle;
 
         this.master = {};
         this.listItem = {};
@@ -21,7 +21,7 @@ angular.module('app.todo', ['ngRoute'])
         this.renameTodo = function () {
             if (this.todoValue.value) {
                 this.todoTitle.value = this.todoValue.value;
-                MyService.updateTodoTitle(this.todoTitle);
+                myService.updateTodoTitle(this.todoTitle);
             }
             this.todoValue = angular.copy(this.master);
         };
@@ -29,7 +29,7 @@ angular.module('app.todo', ['ngRoute'])
         this.addListItem = function () {
             if (this.listItem.text) {
                 this.listItem.val = false;
-                MyService.addItem(this.listItem);
+                myService.addItem(this.listItem);
             }
             this.listItem = {};
             //console.log(MyService);
@@ -39,8 +39,8 @@ angular.module('app.todo', ['ngRoute'])
         /****************************** Removing Item from TODO List ****************************************************/
         this.removeListItem = function () {
             console.log("Todo Controller", this.todoItemList);
-            console.log("Todo Service", MyService.todoItemList);
-            MyService.remove();
-            this.todoItemList = MyService.todoItemList;
+            console.log("Todo Service", myService.todoItemList);
+            myService.remove();
+            this.todoItemList = myService.todoItemList;
         };
 }]);

@@ -42,7 +42,7 @@ html {
     border: none;
 }
 
-.nav>li>a:hover {
+.nav > li > a:hover {
     border-top: 4px solid #333;
     border-bottom: 4px solid #333;
 }
@@ -51,12 +51,12 @@ html {
     padding: 19px 15px;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav > li > a {
     color: #ffffff;
     font-size: 16px;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover {
+.navbar-inverse .navbar-nav > li > a:hover {
     background-color: #333;
 }
 
@@ -156,11 +156,11 @@ html {
     width: 100%;
 }
 
-.affix+.container-fluid {
+.affix + .container-fluid {
     padding-top: 70px;
 }
 
-.affix~.main-container {
+.affix ~ .main-container {
     position: relative;
     top: 50px;
 }
@@ -379,17 +379,21 @@ input:focus {
     outline: none !important;
 }
 
-@media only screen and (max-width: 768px) {
-    .rename-div {
-        display: none;
+@media only screen and (max-width: 990px) {
+    ul#todo-list {
+        padding-top: 25px !important;
     }
+}
+
+@media only screen and (max-width: 768px) {
+
     input.rename-input {
         width: 200px;
     }
-    .nav>li>a {
+    .nav > li > a {
         border: none;
     }
-    .nav>li>a:hover {
+    .nav > li > a:hover {
         border: none;
     }
     .activeTab {

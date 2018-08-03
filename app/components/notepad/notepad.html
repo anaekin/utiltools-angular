@@ -3,12 +3,19 @@
         <h3 class="container-h3 text-center">Notepad</h3>
         <div class="col col-xs-12" id="notepad-container">
             <div>
-                <div class="col col-md-12 text-left header div-header darkblue-back" ng-bind="note.notepadTitle.value" id="notepad-header"></div>
+                <div class="col col-md-12 text-left header div-header notepad-title-bg" ng-bind="note.notepadTitle.value" id="notepad-header"></div>
                 <div id="notepad-rename-div" class="rename-div" style="display: block;">
-                    <input type="text" value="" placeholder="Enter title" dir="ltr" ng-model="note.notepadValue.value" class="rename-input" ng-keydown="$event.keyCode === 13 && note.renameNotepad()" id="notepad-rename-input"> <span class="input-group-btn" id="notepad-rename"><button type="button" id="notepad-rename-btn" class="pink-back text-primary-color text-center material-btn" ng-click="note.renameNotepad()"><i class="material-icons">save</i></button>
-                            </span> </div>
+                    <input type="text" value="" placeholder="Enter title" dir="ltr" ng-model="note.notepadValue.value" class="rename-input" ng-keydown="$event.keyCode === 13 && note.renameNotepad()" id="notepad-rename-input"> 
+                       
+                        <span class="input-group-btn" id="notepad-edit">
+                           <button type="button" id="notepad-edit-btn" class="notepad-rename-btn text-primary-color text-center material-btn" ng-click="note.renameNotepad()"><i class="material-icons">edit</i></button>
+                        </span>
+                        <span class="input-group-btn" id="notepad-rename">
+                           <button type="button" id="notepad-rename-btn" class="notepad-rename-btn text-primary-color text-center material-btn" ng-click="note.saveNotepad()"><i class="material-icons">save</i></button>
+                        </span> 
+                </div>
                 <div>
-                    <textarea type="text" id="notepad-text-input" class="darkblue-full-border" value=" " rows="15"> </textarea>
+                    <textarea type="text" id="notepad-text-input" class="notepad-textarea-border" value=" " rows="15" ng-model="note.notepadData.value"> </textarea>
                 </div>
             </div>
         </div>

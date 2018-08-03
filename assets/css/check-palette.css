@@ -1,10 +1,4 @@
-.blue-back {
-    background-color: #2196F3;
-}
 
-.darkblue-back {
-    background: #1976D2;
-}
 
 .grey-back {
     background-color: #333;
@@ -41,8 +35,27 @@
 .darkblue-full-border {
     border: 2px solid #1976D2;
 }
+/*
+.blue-back {
+    background-color: #2196F3;
+}
 
+.darkblue-back {
+    background: #1976D2;
+}
 .blue-topbottom-border {
     border-top: 2px solid #2196F3;
     border-bottom: 2px solid #2196F3;
 }
+.cal-btn:hover{
+    background: #FFC107;
+}
+
+.cal-op-btn {
+    background: #757575;
+}
+.cal-num-btn {
+    background: #363636;
+}
+
+*/

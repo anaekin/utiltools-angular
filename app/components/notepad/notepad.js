@@ -12,14 +12,18 @@ angular.module('app.notepad', ['ngRoute'])
 
         this.master = {};
         this.notepadTitle = myService.notepadTitle;
-        this.notepadValue = {
-            value: ''
-        };
+        this.notepadData = myService.notepadData;
+//        this.notepadValue = {
+//            value: ''
+//        };
         this.renameNotepad = function () {
-            if (this.notepadValue.value) {
+            if (this.notepadValue && this.notepadValue.value) {
                 this.notepadTitle.value = this.notepadValue.value;
                 myService.updateNotepadTitle(this.notepadTitle);
             }
             this.notepadValue = angular.copy(this.master);
+        };
+        this.saveNotepad = function() {
+            myService.saveNotepadData(this.notepadData);
         };
 }]);

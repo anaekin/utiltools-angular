@@ -19,7 +19,7 @@ angular.module('app.todo', ['ngRoute'])
         this.listItem = {};
         /**************************      TODO-List     **************************************************************/
         this.renameTodo = function () {
-            if (this.todoValue.value) {
+            if (this.todoValue && this.todoValue.value) {
                 this.todoTitle.value = this.todoValue.value;
                 myService.updateTodoTitle(this.todoTitle);
             }
@@ -27,7 +27,7 @@ angular.module('app.todo', ['ngRoute'])
         };
         /****************************** Adding item to TODO List ****************************************************/
         this.addListItem = function () {
-            if (this.listItem.text) {
+            if (this.listItem && this.listItem.text) {
                 this.listItem.val = false;
                 myService.addItem(this.listItem);
             }
@@ -38,8 +38,8 @@ angular.module('app.todo', ['ngRoute'])
 
         /****************************** Removing Item from TODO List ****************************************************/
         this.removeListItem = function () {
-            console.log("Todo Controller", this.todoItemList);
-            console.log("Todo Service", myService.todoItemList);
+//            console.log("Todo Controller", this.todoItemList);
+//            console.log("Todo Service", myService.todoItemList);
             myService.remove();
             this.todoItemList = myService.todoItemList;
         };

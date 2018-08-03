@@ -1,12 +1,18 @@
 /*globals angular*/
 var app = angular.module('app');
-app.factory('myService', function () {
+app.factory('myService',['$http', function () {
     return {
+        currentTab:{
+            value: 0
+        },
         todoTitle: {
             value: 'Item List'
         },
         notepadTitle: {
             value: 'Notes'
+        },
+        notepadData:{
+            value:''
         },
         todoItemList: [
             {
@@ -23,6 +29,9 @@ app.factory('myService', function () {
         updateNotepadTitle: function (n) {
             this.notepadTitle = n;
         },
+        saveNotepadData: function(n){
+            this.notepadData = n;
+        },
         addItem: function (t) {
             this.todoItemList.push(t);
         },
@@ -32,4 +41,4 @@ app.factory('myService', function () {
             });
         }
     };
-});
+}]);

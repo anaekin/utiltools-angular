@@ -1,6 +1,6 @@
 /*globals angular*/
 var app = angular.module('app');
-app.controller('MainController', ['$scope', '$http', function ($scope, $http) {
+app.controller('MainController', ['$scope', '$http','myService', function ($scope, $http, myService) {
     $scope.NAV_ITEMS = [
         {
             title: 'Calculator',
@@ -13,9 +13,10 @@ app.controller('MainController', ['$scope', '$http', function ($scope, $http) {
             ref: '#!/notepad'
                 }
             ];
-
+    $scope.number = myService.currentTab.value;
     $scope.set = function (item) {
         $scope.number = item;
+        myService.currentTab.value = item;
     };
     /*********************** HTTP Request example to fetch data from JSON Object ********************************/
     $http.get('config.json').then(function (response) {

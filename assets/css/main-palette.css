@@ -1,0 +1,55 @@
+.website-title-bg {
+  background: #00796b;
+}
+.navbar-bg {
+  background: #009688;
+}
+.navbar-top-border {
+  border-top: 4px solid #009688;
+}
+.navBottomBorder {
+  border-bottom: 4px solid #ff5722;
+}
+.navbar-topbottom-border {
+  border-top: 2px solid #009688;
+  border-bottom: 2px solid #009688;
+}
+.cal-btn:hover {
+  background: #ff5722;
+}
+.cal-op-btn {
+  background: #757575;
+}
+.cal-num-btn {
+  background: #363636;
+}
+.notepad-title-bg {
+  background: #00796b;
+}
+.notepad-textarea-border {
+  border: 2px solid #00796b;
+}
+.notepad-rename-btn {
+  background-color: #ff5722;
+}
+.notepad-rename-btn:hover {
+  background-color: #607d8b;
+}
+.todo-title-bg {
+  background: #ff5722;
+}
+.todo-btn-color {
+  background-color: #ff5722;
+}
+.todo-btn-color:hover {
+  background-color: #607d8b;
+}
+.todo-rename-btn {
+  background-color: #00796b;
+}
+.todo-rename-btn:hover {
+  background-color: #607d8b;
+}
+.navbar-title-hover:hover {
+  color: #ff4081;
+}

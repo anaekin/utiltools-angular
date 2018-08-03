@@ -1,0 +1,106 @@
+//$title-header-color : #1976D2;
+//$nav-header-color: #2196F3;
+//$navbar-item-border-color: #FFC107;
+//$navbar-title-hover: #ff4081;
+//
+//$cal-btn-hover: #FFC107;
+//$cal-op-btn-color: #757575;
+//$cal-num-btn-color: #363636;
+//
+//$notepad-title-bg-color: #1976D2;
+//$notepad-textarea-border: #1976D2;
+//$notepad-rename-btn: #FFC107;
+//$notepad-rename-btn-hover : #607D8B;
+//
+//$todo-title-bg-color: #FFC107;
+//$todo-btn-color: #FFC107;
+//$todo-btn-hover: #607D8B;
+//$todo-rename-btn: #1976D2;
+//$todo-rename-btn-hover : #607D8B;
+$darkblue: #00796B;
+$lightblue: #009688;
+$yellow: #FF5722;
+$pink: #ff4081;
+$grey: #607D8B;
+$title-header-color : $darkblue;
+$nav-header-color: $lightblue;
+$navbar-item-border-color: $yellow;
+$navbar-title-hover: $pink;
+
+$cal-btn-hover: $yellow;
+$cal-op-btn-color: #757575;
+$cal-num-btn-color: #363636;
+
+$notepad-title-bg-color: $darkblue;
+$notepad-textarea-border: $darkblue;
+$notepad-rename-btn: $yellow;
+$notepad-rename-btn-hover : $grey;
+
+$todo-title-bg-color: $yellow;
+$todo-btn-color: $yellow;
+$todo-btn-hover: $grey;
+$todo-rename-btn: $darkblue;
+$todo-rename-btn-hover : $grey;
+.website-title-bg {
+    background: $title-header-color;
+}
+
+.navbar-bg {
+    background: $nav-header-color;
+}
+.navButton-border{
+    
+}
+.navbar-top-border {
+    border-top: 4px solid $nav-header-color;
+}
+.navBottomBorder {
+    border-bottom: 4px solid $navbar-item-border-color;
+}
+.navbar-topbottom-border {
+    border-top: 2px solid $nav-header-color;
+    border-bottom: 2px solid $nav-header-color;
+}
+.cal-btn:hover{
+    background: $cal-btn-hover;
+}
+.cal-op-btn {
+    background: $cal-op-btn-color;
+}
+.cal-num-btn {
+    background: $cal-num-btn-color;
+}
+.notepad-title-bg{
+    background: $notepad-title-bg-color;
+}
+.notepad-textarea-border{
+    border: 2px solid $notepad-textarea-border;
+}
+.notepad-rename-btn{
+    background-color: $notepad-rename-btn;
+}
+.notepad-rename-btn:hover{
+    background-color: $notepad-rename-btn-hover;
+}
+
+
+.todo-title-bg{
+    background: $todo-title-bg-color;
+}
+.todo-btn-color{
+    background-color: $todo-btn-color;
+}
+.todo-btn-color:hover{
+    background-color: $todo-btn-hover;
+}
+.todo-rename-btn{
+    background-color: $todo-rename-btn;
+}
+.todo-rename-btn:hover{
+    background-color: $todo-rename-btn-hover;
+}
+.navbar-title-hover:hover {
+    color: $navbar-title-hover;
+}
+
+
